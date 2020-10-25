@@ -43,3 +43,7 @@ documentation/UserManual/*.tmp
 documentation/UserManual/*.toc
 documentation/UserManual/*.xref
 documentation/UserManual/*.xref
+
+# builds
+bin
+bin-int

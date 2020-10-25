@@ -14,7 +14,7 @@ project "ReactPhysics3D"
     }
     includedirs
 	{
-        "%{prj.name}/include",
+        "include",
     }
 
 	defines

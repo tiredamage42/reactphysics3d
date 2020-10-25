@@ -47,3 +47,8 @@ documentation/UserManual/*.xref
 # builds
 bin
 bin-int
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj*

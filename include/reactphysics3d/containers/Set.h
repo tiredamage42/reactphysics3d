@@ -361,7 +361,7 @@ class Set {
 
             if (capacity > 0) {
 
-               initialize(capacity);
+               initialize((int)capacity);
             }
         }
 
@@ -477,7 +477,7 @@ class Set {
             mEntries[entryIndex].value = static_cast<V*>(mAllocator.allocate(sizeof(V)));
             assert(mEntries[entryIndex].value != nullptr);
             new (mEntries[entryIndex].value) V(value);
-            mBuckets[bucket] = entryIndex;
+            mBuckets[bucket] = (int)entryIndex;
 
             return true;
         }

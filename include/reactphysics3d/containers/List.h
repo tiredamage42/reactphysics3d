@@ -328,7 +328,7 @@ class List {
         /// pointing to the element after the removed one (or end() if none)
         Iterator remove(const Iterator& it) {
            assert(it.mBuffer == mBuffer);
-           return removeAt(it.mCurrentIndex);
+           return removeAt((uint)it.mCurrentIndex);
         }
 
         /// Remove an element from the list at a given index (all the following items will be moved)

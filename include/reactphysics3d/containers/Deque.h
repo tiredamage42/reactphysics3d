@@ -114,6 +114,7 @@ class Deque {
             }
             else {
                 assert(false);
+                return mChunks[0][0];
             }
         }
 
@@ -503,6 +504,7 @@ class Deque {
                 return mChunks[mFirstChunkIndex][mFirstItemIndex];
             }
             assert(false);
+            return mChunks[0][0];
         }
 
         /// Return a reference to the last item of the deque
@@ -511,6 +513,7 @@ class Deque {
                 return mChunks[mLastChunkIndex][mLastItemIndex];
             }
             assert(false);
+            return mChunks[0][0];
         }
 
         /// Clear the elements of the deque

@@ -118,7 +118,7 @@ PhysicsWorld::~PhysicsWorld() {
              "Physics World: Physics world " + mName + " has been destroyed",  __FILE__, __LINE__);
 
     // Destroy all the collision bodies that have not been removed
-    for (int i=mCollisionBodies.size() - 1 ; i >= 0; i--) {
+    for (int i=(int)mCollisionBodies.size() - 1 ; i >= 0; i--) {
         destroyCollisionBody(mCollisionBodies[i]);
     }
 
@@ -136,7 +136,7 @@ PhysicsWorld::~PhysicsWorld() {
     }
 
     // Destroy all the rigid bodies that have not been removed
-    for (int i=mRigidBodies.size() - 1; i >= 0; i--) {
+    for (int i=(int)mRigidBodies.size() - 1; i >= 0; i--) {
         destroyRigidBody(mRigidBodies[i]);
     }
 
@@ -824,10 +824,10 @@ void PhysicsWorld::createIslands() {
                         mProcessContactPairsOrderIslands.add(contactPairs[p]);
 
                         assert(pair.potentialContactManifoldsIndices.size() > 0);
-                        nbTotalManifolds += pair.potentialContactManifoldsIndices.size();
+                        nbTotalManifolds += (uint)pair.potentialContactManifoldsIndices.size();
 
                         // Add the contact manifold into the island
-                        mIslands.nbContactManifolds[islandIndex] += pair.potentialContactManifoldsIndices.size();
+                        mIslands.nbContactManifolds[islandIndex] += (uint)pair.potentialContactManifoldsIndices.size();
                         pair.isAlreadyInIsland = true;
 
                         const Entity otherBodyEntity = pair.body1Entity == bodyToVisitEntity ? pair.body2Entity : pair.body1Entity;

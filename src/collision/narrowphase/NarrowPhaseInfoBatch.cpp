@@ -149,7 +149,7 @@ void NarrowPhaseInfoBatch::clear() {
     // allocated in the next frame at a possibly different location in memory (remember that the
     // location of the allocated memory of a single frame allocator might change between two frames)
 
-    mCachedCapacity = overlappingPairIds.size();
+    mCachedCapacity = (uint)overlappingPairIds.size();
 
     overlappingPairIds.clear(true);
     colliderEntities1.clear(true);

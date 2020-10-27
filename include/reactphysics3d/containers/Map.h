@@ -366,7 +366,7 @@ class Map {
 
             if (capacity > 0) {
 
-               initialize(capacity);
+               initialize((int)capacity);
             }
         }
 
@@ -500,7 +500,7 @@ class Map {
             mEntries[entryIndex].keyValue = static_cast<Pair<K,V>*>(mAllocator.allocate(sizeof(Pair<K,V>)));
             assert(mEntries[entryIndex].keyValue != nullptr);
             new (mEntries[entryIndex].keyValue) Pair<K,V>(keyValue);
-            mBuckets[bucket] = entryIndex;
+            mBuckets[bucket] = (int)entryIndex;
         }
 
         /// Remove the element pointed by some iterator

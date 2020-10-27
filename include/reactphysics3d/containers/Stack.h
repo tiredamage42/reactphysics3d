@@ -79,7 +79,7 @@ class Stack {
 
             mArray = newArray;
 
-            mCapacity = capacity;
+            mCapacity = (uint)capacity;
         }
 
     public:

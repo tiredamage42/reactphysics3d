@@ -65,7 +65,7 @@ void HalfEdgeStructure::init() {
                 firstEdgeKey = pairV1V2;
             }
             else if (v >= 1) {
-                nextEdges.add(Pair<VerticesPair, VerticesPair>(currentFaceEdges[currentFaceEdges.size() - 1], pairV1V2));
+                nextEdges.add(Pair<VerticesPair, VerticesPair>(currentFaceEdges[(uint)currentFaceEdges.size() - 1], pairV1V2));
             }
             if (v == (face.faceVertices.size() - 1)) {
                 nextEdges.add(Pair<VerticesPair, VerticesPair>(pairV1V2, firstEdgeKey));
@@ -82,7 +82,7 @@ void HalfEdgeStructure::init() {
             auto itEdge = edges.find(pairV2V1);
             if (itEdge != edges.end()) {
 
-                const uint edgeIndex = mEdges.size();
+                const uint edgeIndex = (uint)mEdges.size();
 
                 itEdge->second.twinEdgeIndex = edgeIndex + 1;
                 edge.twinEdgeIndex = edgeIndex;

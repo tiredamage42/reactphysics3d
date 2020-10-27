@@ -297,7 +297,7 @@ class CollisionCallback {
  * @return The number of contact pairs
  */
 inline uint CollisionCallback::CallbackData::getNbContactPairs() const {
-    return mContactPairsIndices.size() + mLostContactPairsIndices.size();
+    return (uint)(mContactPairsIndices.size() + mLostContactPairsIndices.size());
 }
 
 // Return the number of contact points in the contact pair

@@ -712,7 +712,7 @@ inline void PhysicsWorld::setEventListener(EventListener* eventListener) {
  * @return The number of collision bodies in the physics world
  */
 inline uint PhysicsWorld::getNbCollisionBodies() const {
-   return mCollisionBodies.size();
+   return (uint)mCollisionBodies.size();
 }
 
 // Return the number of RigidBody in the physics world
@@ -720,7 +720,7 @@ inline uint PhysicsWorld::getNbCollisionBodies() const {
  * @return The number of rigid bodies in the physics world
  */
 inline uint PhysicsWorld::getNbRigidBodies() const {
-   return mRigidBodies.size();
+   return (uint)mRigidBodies.size();
 }
 
 // Return true if the debug rendering is enabled

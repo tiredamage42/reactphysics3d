@@ -264,7 +264,7 @@ class DebugRenderer : public EventListener {
  * @return The number of lines in the array of lines to draw
  */
 inline uint32 DebugRenderer::getNbLines() const {
-	return mLines.size();
+	return (uint32)mLines.size();
 }
 
 // Return a reference to the list of lines
@@ -288,7 +288,7 @@ inline const DebugRenderer::DebugLine* DebugRenderer::getLinesArray() const {
  * @return The number of triangles in the array of triangles to draw
  */
 inline uint32 DebugRenderer::getNbTriangles() const {
-	return mTriangles.size();
+	return (uint32)mTriangles.size();
 }
 
 // Return a reference to the list of triangles

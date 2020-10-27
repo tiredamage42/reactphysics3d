@@ -97,7 +97,7 @@ inline TriangleVertexArray* TriangleMesh::getSubpart(uint indexSubpart) const {
  * @return The number of sub-parts of the mesh
  */
 inline uint TriangleMesh::getNbSubparts() const {
-    return mTriangleArrays.size();
+    return (uint)mTriangleArrays.size();
 }
 
 }

@@ -301,7 +301,7 @@ List<Vector3> reactphysics3d::clipPolygonWithPlanes(const List<Vector3>& polygon
 
     assert(planesPoints.size() == planesNormals.size());
 
-        uint nbMaxElements = polygonVertices.size() + planesPoints.size();
+        uint nbMaxElements = (uint)(polygonVertices.size() + planesPoints.size());
         List<Vector3> inputVertices(allocator, nbMaxElements);
         List<Vector3> outputVertices(allocator, nbMaxElements);
 
@@ -312,7 +312,7 @@ List<Vector3> reactphysics3d::clipPolygonWithPlanes(const List<Vector3>& polygon
 
             outputVertices.clear();
 
-            uint nbInputVertices = inputVertices.size();
+            uint nbInputVertices = (uint)inputVertices.size();
             uint vStart = nbInputVertices - 1;
 
             // For each edge of the polygon
